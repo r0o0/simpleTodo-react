@@ -1,0 +1,78 @@
+.title
+  margin: 0
+  padding: 0
+  padding-bottom: 8px
+  font-size: 28px
+  color: #2e2e2e
+.todolist
+  padding: 16px
+  .todolist__list
+    box-sizing: border-box
+    display: flex
+    align-items: center
+    width: 100%
+    height: 56px
+    padding: 0 8px
+    margin-bottom: 16px
+    border: 1px solid #ccc
+    border-radius: 8px
+    list-style: none
+    .text
+      font-size: 17px
+      color: #2e2e2e
+    .todolist__title
+      padding-left: 10px
+      .todolist__category
+        margin: 0
+        font-size: 11px
+        color: #757575
+    .todolist__checkbox
+      order: -1
+      display: flex
+      justify-content: center
+      align-items: center
+      width: 24px
+      height: 24px
+      margin-left: 8px
+      border: 1px solid #000
+      border-radius: 4px
+      &::before
+        content: ''
+        transform: translate(-50%, -50%)
+      &:checked
+        &::before
+          width: 10px
+          height: 6px
+          margin-top: -5px
+          border-left: 2px solid
+          border-bottom: 2px solid
+          transform: rotate(-45deg)
+  // todo complete
+  .todo--done
+    .text
+      opacity: 0.4
+      text-decoration: line-through
+      transition: all 0.14s ease-out
+  // delete button
+  .btn--delete
+    margin-left: auto
+    color: #e20c0c
+    border: 1px solid #e20c0c
+    border-radius: 4px
+
+// reset
+ul
+  margin: 0
+  padding: 0
+
+a
+  color: inherit
+  text-decoration: none
+p
+  margin: 0
+
+input[type="checkbox"]
+  appearance: none
+  outline: none
+  border: 0
+  cursor: pointer
